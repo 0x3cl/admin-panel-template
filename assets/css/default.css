@@ -1,9 +1,101 @@
 /* IMPORT POPPINS  */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
+:root {
+    --primary-background: #fff;
+    
+    --primary-color: #000;
+    --secondary-color: #fff;
+
+    --primary-active-color: #005457;
+
+    --primary-btn: #005457;
+    
+}
+
 * {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 14px;
 }
 
+/* BUTTONS */
+
+.btn {
+    position: relative;
+}
+
+.btn-check:checked+.btn, 
+.btn.active, .btn.show, 
+.btn:first-child:active, 
+:not(.btn-check)+.btn:active,
+.btn:hover {
+    box-shadow: none;
+    background-color: var(--primary-btn);
+    border-color: var(--primary-active-color);
+}
+
+.btn-outline-primary,
+.btn-outline-primary {
+    color: var(--primary-color) !important;
+    border-color: var(--primary-active-color) !important;
+    background-color: var(--primary-background) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-btn);
+    border-color: inherit !important;
+}
+
+.btn-standard {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.btn-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.btn-icon i {
+    font-size: 20px;
+}
+
+.btn-icon.right i {
+    position: absolute;
+    right: 20px;
+    z-index: 999;
+}
+
+.btn-icon.left i {
+    position: absolute;
+    left: 20px;
+    z-index: 999;
+}
+
+/* INPUTS */
+
+.form-control {
+    box-shadow: none !important;
+    &:focus {
+        border-color: var(--primary-active-color);
+    }
+}
+
+/* TYPOGRAPHY */
+
+.text-link {
+    color: var(--primary-color);
+    font-size: 12px;
+    font-weight: 500;
+    &:hover {
+        color: var(--primary-active-color);
+    }
+}
