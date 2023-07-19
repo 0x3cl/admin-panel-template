@@ -27,19 +27,10 @@
 <body>
 
     <div class="dashboard-wrapper my-5 my-md-0">
-        <div class="d-flex align-items-center">
+        <div class="d-flex  ">
             <div class="sidebar">
                 <div class="sidebar-header my-4">
                     <div class="logo">Admin Panel</div>
-                </div>
-                <div class="user-profile">
-                    <div>
-                        <img src="assets/uploads/avatar/male-default.jpg" alt="" srcset="">
-                        <div class="user-info mt-3 text-center">
-                            <h5 class="mb-0">Carl Llemos</h5>
-                            <small>Administrator <i class='bx bxs-badge-check' ></i></small>
-                        </div>
-                    </div>
                 </div>
                 <hr class="mx-4">
                 <div class="menu-content mb-5">
@@ -73,7 +64,136 @@
                 </div>
             </div>
             <div class="content">
-
+                <nav class="navbar navbar-expand-lg py-3">
+                    <div class="container gap-5 mx-3">
+                        <a href="#" class="navbar-brand">Dashboard</a>
+                        <div class="hamburger-wrapper">
+                            <div class="hamburger"></div>
+                        </div>
+                        <ul class="navbar-nav d-flex align-items-center gap-5 ms-auto me-3">
+                            <li class="nav-item">
+                                <div class="notif">
+                                    <i class='bx bx-bell' ></i>
+                                    <span class="notif-count">10</span>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="notif">
+                                    <i class='bx bx-envelope'></i>
+                                    <span class="notif-count">10</span>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <div class="navbar-profile" data-bs-toggle="dropdown">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div>
+                                                <img src="/assets/uploads/avatar/male-default.jpg">
+                                            </div>
+                                            <div class="profile-info">
+                                                <div class="dropdown-toggle">Carl Llemos</div>
+                                                <div>#00011</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="dropdown-menu mt-3" aria-labelledby="dropdownMenuButton1" data-bs-popper="none">
+                                        <li><a class="dropdown-item" href="/admin/me">Profile</a></li>
+                                        <li><a class="dropdown-item" href="/api/auth/admin/signout">Sign Out</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="inner-content mx-3 pb-5">
+                    <div class="container">
+                        <div class="greetings">
+                            <h5 class="m-0">Welcome Back!</h5>
+                            <h1>Carl Llemos</h1>
+                            <hr>
+                        </div>
+                        <section class="mt-5 overview">
+                            <small>Overview</small>
+                            <div class="row mt-4">
+                                <div class="col-12 col-md-4 mb-3">
+                                    <div class="card orange">
+                                        <div class="card-header border-0 bg-transparent">
+                                            Total Admins
+                                        </div>
+                                        <div class="card-body">
+                                            <h1 class="m-0">0</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 mb-3">
+                                    <div class="card green">
+                                        <div class="card-header border-0 bg-transparent">
+                                            Total Visitors
+                                        </div>
+                                        <div class="card-body">
+                                            <h1 class="m-0">0</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 mb-3">
+                                    <div class="card blue">
+                                        <div class="card-header border-0 bg-transparent">
+                                            Total Projects
+                                        </div>
+                                        <div class="card-body">
+                                            <h1 class="m-0">0</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 mb-3">
+                                    <div class="card violet">
+                                        <div class="card-header border-0 bg-transparent">
+                                            Total Skills
+                                        </div>
+                                        <div class="card-body">
+                                            <h1 class="m-0">0</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 mb-3">
+                                    <div class="card red">
+                                        <div class="card-header border-0 bg-transparent">
+                                            Total Testimonials
+                                        </div>
+                                        <div class="card-body">
+                                            <h1 class="m-0">0</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-4 mb-3">
+                                    <div class="card dark-blue">
+                                        <div class="card-header border-0 bg-transparent">
+                                            Total Socials
+                                        </div>
+                                        <div class="card-body">
+                                            <h1 class="m-0">0</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="mt-4">
+                            <small>Statistics</small>
+                            <div class="row mt-4">
+                                <div class="col-12">
+                                    <div class="card">
+                                        <div class="card-header border-0">
+                                            Site Visitors
+                                        </div>
+                                        <div class="card-body">
+                                            <canvas id="site-visitor"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -82,5 +202,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-<script src="assets/js/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="module" src="assets/js/dashboard.js"></script>
 </html>

@@ -4,6 +4,7 @@
 :root {
     --primary-background: #fff;
     --secondary-background: #36393f;
+    --tertiary-background: #dedede;
     
     --primary-color: #000;
     --secondary-color: #fff;
@@ -12,6 +13,14 @@
 
     --primary-btn: #005457;
     --primary-hover: #ffffff2b;
+
+    --orange-color: #835616;
+    --green-color: #095f40;
+    --blue-color: #065e6b;
+    --violet-color: #3d0d45;
+    --red-color: #540d2d;
+    --dark-blue-color: #005457;
+
     
 }
 
@@ -100,4 +109,30 @@
     &:hover {
         color: var(--primary-active-color);
     }
+}
+
+/* COLOR */
+
+.orange {
+    background-color: var(--orange-color);
+}
+
+.green {
+    background-color: var(--green-color);
+}
+
+.blue {
+    background-color: var(--blue-color);
+}
+
+.violet {
+    background-color: var(--violet-color);
+}
+
+.red {
+    background-color: var(--red-color);
+}
+
+.dark-blue {
+    background-color: var(--dark-blue-color);
 }
