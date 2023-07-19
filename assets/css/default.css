@@ -3,6 +3,7 @@
 
 :root {
     --primary-background: #fff;
+    --secondary-background: #36393f;
     
     --primary-color: #000;
     --secondary-color: #fff;
@@ -10,6 +11,7 @@
     --primary-active-color: #005457;
 
     --primary-btn: #005457;
+    --primary-hover: #ffffff2b;
     
 }
 
