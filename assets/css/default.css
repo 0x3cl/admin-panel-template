@@ -6,28 +6,28 @@
     --secondary-background: #36393f;
     --tertiary-background: #dedede;
     
-    --primary-color: #000;
+    --primary-color: #323232;
     --secondary-color: #fff;
 
     --primary-active-color: #005457;
 
     --primary-btn: #005457;
-    --primary-hover: #ffffff2b;
+    --primary-hover: #7457572b;
 
     --orange-color: #835616;
     --green-color: #095f40;
     --blue-color: #065e6b;
     --violet-color: #3d0d45;
     --red-color: #540d2d;
-    --dark-blue-color: #005457;
-
-    
+    --dark-blue-color: #005457;   
 }
 
 * {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
     font-size: 14px;
+    user-select: none;
+    user-zoom: none;
 }
 
 /* BUTTONS */
@@ -91,6 +91,30 @@
     z-index: 999;
 }
 
+.scroll-top {
+    width: 35px;
+    height: 35px;
+    background-color: var(--primary-color);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: all ease 0.3s;
+    cursor: pointer;
+    & i {
+        font-size: 10px;
+        color: var(--secondary-color);
+    }
+    &.active {
+        display: flex;
+        transition: all ease 0.3s;
+    }
+}
+
 /* INPUTS */
 
 .form-control {
@@ -109,6 +133,18 @@
     &:hover {
         color: var(--primary-active-color);
     }
+}
+
+span.active-circle {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    display: inline-flex;
+    position: relative;
+    left: 2px;
+    bottom: 3px;
+    align-items: start;
+    background-color: #05ff40;
 }
 
 /* COLOR */
@@ -136,3 +172,4 @@
 .dark-blue {
     background-color: var(--dark-blue-color);
 }
+
