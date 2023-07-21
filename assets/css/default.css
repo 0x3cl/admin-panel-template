@@ -3,8 +3,8 @@
 
 :root {
     --primary-background: #fff;
-    --secondary-background: #36393f;
-    --tertiary-background: #dedede;
+    --secondary-background: #191923;
+    --tertiary-background: #36393f;
     
     --primary-color: #323232;
     --secondary-color: #fff;
@@ -22,6 +22,34 @@
     --dark-blue-color: #005457;   
 }
 
+body.dark {
+    transition: all ease 0.3s;
+    color: var(--secondary-color);
+    background-color: var(--secondary-background);
+    & .sidebar {
+        transition: all ease 0.3s;
+        color: var(--secondary-color);
+        background-color: var(--secondary-background);
+    }
+    & .navbar {
+        &.active {
+            background-color: var(--secondary-background);
+        }
+        & .navbar-brand {
+            color: var(--secondary-color);
+        }
+        & .hamburger {
+            background-color: var(--secondary-color);
+            &::before, &::after {
+                background-color: var(--secondary-color);
+            }
+        }
+    } 
+    & .other .card {
+        background-color: var(--tertiary-background);
+    }
+}
+
 * {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
@@ -34,6 +62,7 @@
 
 .btn {
     position: relative;
+    border: 0;
 }
 
 .btn-check:checked+.btn, 
@@ -173,3 +202,9 @@ span.active-circle {
     background-color: var(--dark-blue-color);
 }
 
+/* CARDS */
+
+.card-header {
+    font-weight: 600;
+    text-transform: uppercase;
+}

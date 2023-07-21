@@ -8,12 +8,15 @@ $(document).ready(function() {
             $('.sidebar').addClass('active');
             $('.content').addClass('active');
             $('.logo h4').addClass('active');
+            $('.icon').attr('data-bs-toggle', '');
+            $('.multi-collapse').collapse('hide');
             isActive = true;
         } else {
             $('.hamburger-wrapper').removeClass('active');
             $('.sidebar').removeClass('active');
             $('.content').removeClass('active');
             $('.logo h4').removeClass('active');
+            $('.icon').attr('data-bs-toggle', 'collapse');
             isActive = false;
         }
     });
@@ -41,6 +44,23 @@ $(document).ready(function() {
         $('html, body').animate({
             scrollTop: $('html, body').offset().top
         }, 'slow') 
+    });
+
+    // TOGGLE THEME
+
+    let isDark = false;
+    $('#btn-toggle-theme').on('click', () => {
+        if(!isDark) {
+            $('body').addClass('dark');
+            $('#btn-toggle-theme').html('<i class="bx bxs-sun"></i> Switch Light ');
+            $('.logo img').attr('src', '/assets/images/logo-light.png');
+            isDark = true;
+        } else {
+            $('body').removeClass('dark');
+            $('#btn-toggle-theme').html('<i class="bx bx-moon"></i> Switch Dark ');
+            $('.logo img').attr('src', '/assets/images/logo-dark.png');
+            isDark = false;
+        }
     });
 
 });
